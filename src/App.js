@@ -24,23 +24,28 @@
 import React,{useState} from 'react';
 import {NotesList} from './Components/NotesList'
 import {MyModal} from './Modal'
+import './App.css'
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
+  const [newNote, setNewNote] = useState({})
+  console.log(newNote)
+
 
   return (
     <div className="App">
-      <header className="App-header">
       <button variant="primary" onClick={() => setModalShow(true)}>
         Add Note
       </button>
 
       <MyModal
+        setNewNote={setNewNote}
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <NotesList/>
-      </header>
+      <NotesList
+        newNote={newNote}
+      />
     </div>
   );
 }

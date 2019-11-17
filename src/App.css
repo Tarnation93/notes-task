@@ -1,3 +1,20 @@
-.App {
-    display:inline;
+
+.button-wrapper {
+    display:flex;
+    margin: 20px;
+    justify-content: center;
+}
+.button {
+    margin: 100px;
+    width: 25rem;
+}
+.input-div {   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.input {
+    width: 20%;
 }

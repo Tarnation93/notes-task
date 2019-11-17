@@ -1,38 +1,38 @@
 {
     "notes": [
-        {
-            "title": "washing dishes",
+        {  
+            "id": 0,
+            "title": "washing 12 dishes",
             "body": "wash dishes today",
             "author_name": "Suzan",
-            "date": "13.11.2019",
             "status": "pending"
         },
         {
-            "title": "washing dishes",
+            "id": 1,
+            "title": "washing 14 dishes",
             "body": "wash dishes today",
             "author_name": "Suzan",
-            "date": "13.11.2019",
             "status": "pending"
         },
         {
-            "title": "washing dishes",
+            "id": 2,
+            "title": "washing 56 dishes",
             "body": "wash dishes today",
             "author_name": "Suzan",
-            "date": "13.11.2019",
             "status": "pending"
         },
         {
+            "id": 3,
             "title": "washing dishes",
             "body": "wash dishes today",
             "author_name": "Suzan",
-            "date": "13.11.2019",
             "status": "pending"
         },
         {
+            "id": 4,
             "title": "washing dishes",
             "body": "wash dishes today",
             "author_name": "Suzan",
-            "date": "13.11.2019",
             "status": "pending"
         }
     ]

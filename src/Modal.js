@@ -1,18 +1,34 @@
-import React, { useRef, useState } from 'react';
-import Modal from 'react-bootstrap/Modal'
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import { getDate } from './Logic/utils';
+import Button from 'react-bootstrap/Button';
+
 export function MyModal(props) {
   const [title, setTitle] = useState('');
-  const [body, setBody] = useState();
-  const [author, setAuthor] = useState();
-  
+  const [body, setBody] = useState('');
+  const [author, setAuthor] = useState('');
+  function addingNotes() {
+    if (title || body || author) {
+      props.setAllNotes([...props.allNotes, { id: props.allNotes.length, title, body, author_name: author, date: new Date(getDate()) }])
+    }
+  }
 
-  // console.log(props)
+  function handleSetTitle(e) {
+    setTitle(e.target.value)
+  };
+
+  function handleSetBody(e) {
+    setBody(e.target.value)
+  };
+
+  function handleSetAutor(e) {
+    setAuthor(e.target.value)
+  };
+
 
   return (
-    <Modal
-      {...props}
-     
-
+    <Modal show={props.showModal}
+            onHide={props.onHide}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -21,22 +37,16 @@ export function MyModal(props) {
       </Modal.Header>
       <Modal.Body>
         <h6> add note title</h6>
-        <input onChange={e => setTitle(e.target.value)} value={title}></input>
+        <input onChange={handleSetTitle} value={title}></input>
         <h6> add note body</h6>
-        <input onChange={e => setBody(e.target.value)} value={body}></input>
+        <input onChange={handleSetBody} value={body}></input>
         <h6> add who created note</h6>
-        <input onChange={e => setAuthor(e.target.value)} value={author}></input>
-
-
-        <h4>Notes modal</h4>
-        <p>
-          Tarot
-        </p>
+        <input onChange={handleSetAutor} value={author}></input>
       </Modal.Body>
       <Modal.Footer>
-        <button onClick={()=>props.setNewNote({title,body,author})}>Save</button>
-        <button onClick={props.onHide}>Close</button>
+        <Button onClick={addingNotes}>Save</Button>
+        <Button variant="secondary" onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );
-}
+};

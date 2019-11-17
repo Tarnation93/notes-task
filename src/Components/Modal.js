@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { getDate } from './Logic/utils';
+import { getDate } from '../Logic/utils';
 import Button from 'react-bootstrap/Button';
 
 export function MyModal(props) {

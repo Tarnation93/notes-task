@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NotesList } from './Components/NotesList';
-import { MyModal } from './Modal';
+import { MyModal } from './Components/Modal';
 import './App.css'
 import { randomDate, sortNotes } from './Logic/utils.js';
 import 'bootstrap/dist/css/bootstrap.min.css';

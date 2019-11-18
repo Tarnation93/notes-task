@@ -5,10 +5,13 @@ import './App.css'
 import { randomDate, sortNotes } from './Logic/utils.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import {DraftList} from './Components/DraftList'
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
   const [allNotes, setAllNotes] = useState();
+  const [draftNotes, setDraftNotes] = useState ([]);
+  const [draftId, setDraftId] = useState(false);
 
 
   useEffect(() => {
@@ -19,7 +22,8 @@ function App() {
       setAllNotes(data.notes);
     })
   }, [])
-  
+
+ 
   return (
     <div>
      
@@ -28,6 +32,10 @@ function App() {
         allNotes={allNotes}
         showModal={modalShow}
         onHide={() => setModalShow(false)}
+        draftNotes={draftNotes}
+        setDraftNotes={setDraftNotes}
+        draftId={draftId}
+        setDraftId={setDraftId}
       />
       {allNotes ? (
         <NotesList
@@ -40,7 +48,15 @@ function App() {
           Add Note
         </Button>
         <Button className="button" variant="secondary"
-          onClick={() => sortNotes(allNotes, setAllNotes)}>sort</Button></div>
+          onClick={() => sortNotes(allNotes, setAllNotes)}>sort</Button>
+      </div>
+      {draftNotes.length ? (
+        <DraftList 
+        setDraftId={setDraftId} 
+        setModalShow={setModalShow} 
+        draftNotes={draftNotes} 
+        setDraftNotes={setDraftNotes} />
+      ) : null}
     </div>
   );
 };

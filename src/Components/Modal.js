@@ -57,7 +57,6 @@ export function MyModal(props) {
     setAuthor(e.target.value)
   };
 
-
   return (
     <Modal show={props.showModal}
       onHide={props.onHide}
@@ -77,7 +76,6 @@ export function MyModal(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={(e) => {
-
           addingNotes(e)
           setTitle('')
           setBody('')

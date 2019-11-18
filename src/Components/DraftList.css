@@ -1,7 +1,12 @@
+
+.button-wrapper {
+    display:flex;
+    margin: 20px;
+    justify-content: center;
+}
 .button {
     
         margin-bottom: 70px;
-        width: 7rem;
+        width: 200px;
         height: 50px;
-    
 }

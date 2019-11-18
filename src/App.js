@@ -12,8 +12,7 @@ function App() {
   const [allNotes, setAllNotes] = useState();
   const [draftNotes, setDraftNotes] = useState ([]);
   const [draftId, setDraftId] = useState(false);
-
-
+  
   useEffect(() => {
     fetch('notes.json').then(res => res.json()).then((data) => {
       data.notes.forEach(el => {
@@ -23,7 +22,6 @@ function App() {
     })
   }, [])
 
- 
   return (
     <div>
      

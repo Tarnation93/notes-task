@@ -9,30 +9,30 @@
         },
         {
             "id": 1,
-            "title": "washing 14 dishes",
-            "body": "wash dishes today",
-            "author": "Suzan",
+            "title": "clean room",
+            "body": "be sure to clean it tomorrow",
+            "author": "Peter",
             "status": "pending"
         },
         {
             "id": 2,
-            "title": "washing 56 dishes",
-            "body": "wash dishes today",
-            "author": "Suzan",
+            "title": "study",
+            "body": "study for next exam",
+            "author": "John",
             "status": "pending"
         },
         {
             "id": 3,
-            "title": "washing dishes",
-            "body": "wash dishes today",
-            "author": "Suzan",
+            "title": "go to gym",
+            "body": "start going to the gym finally",
+            "author": "Luka",
             "status": "pending"
         },
         {
             "id": 4,
-            "title": "washing dishes",
-            "body": "wash dishes today",
-            "author": "Suzan",
+            "title": "pick up kids ",
+            "body": "your turn to pick up kids from school today",
+            "author": "Bridgit",
             "status": "pending"
         }
     ]
